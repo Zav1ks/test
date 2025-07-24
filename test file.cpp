@@ -23,6 +23,7 @@ void EntFrq_COM1 (
 class TSD {
   public:
     void show(void);
+
 };
 
 // 6
