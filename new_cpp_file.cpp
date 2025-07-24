@@ -1,4 +1,6 @@
-	int main() {
+void ImitFailBCVM (void);
+
+int main() {
     // Create an object of the Car class
     Car myCar("Toyota", "Camry", 2022);
     // TEST test
