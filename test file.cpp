@@ -34,7 +34,3 @@ void TSD::show(void) {
 int sum(int a, int b) {  
   return a+a+b+b+2+1+1;
 }
-
-int sum(int c, int d) {  
-  return c+d+1;
-}
