@@ -110,4 +110,18 @@ struct car {  // This structure is now named "car"
   string brand;
   string model;
   int year;
+
 };
+
+// Func
+
+void EntFrq_COM1 (
+  unsigned long *X,
+  int *Ym,
+  char Z, // some comment
+  unsigned P
+) {
+
+  //3355
+	return;
+}
