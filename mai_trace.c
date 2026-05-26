@@ -40,4 +40,18 @@ void ARLO_Init(ArloState_t *state)
 static void ARLO_ProcessRlsTargetData(ArloState_t *state)	
 {	
     /* Обработка данных от бортовой РЛС. */	
-/* При действительном результате валидности цели признак валидной цели устанавливается в истинное значение. */
+/* При действительном результате валидности цели признак валидной цели устанавливается в истинное значение. */	
+    if (state->Target_Validity_Result == ARLO_VALID) {	
+        state->Target_Valid = true;	
+    }	
+
+    /* При недействительном результате валидности цели признак валидной цели устанавливается в ложное значение. */	
+    if (state->Target_Validity_Result == ARLO_INVALID) {	
+        state->Target_Valid = false;	
+    }	
+
+    /* При валидной цели идентификатор текущей цели принимается из данных бортовой РЛС. */	
+    if (state->Target_Valid == true) {	
+        state->Current_Target_ID = state->RLS_Target_Data.Target_ID;	
+    }	
+}
