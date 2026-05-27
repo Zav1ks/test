@@ -44,7 +44,12 @@ static void ARLO_ProcessRlsTargetData(ArloState_t *state)
     if (state->Target_Validity_Result == ARLO_VALID) {	
         state->Target_Valid = true;	
     }	
-
+	
+	/* При недействительном результате валидности цели признак валидной цели устанавливается в ложное значение. */	
+	if (state->Target_Validity_Result == ARLO_VALID) {	
+        state->Target_Valid = true;	
+    }	
+	
     /* При недействительном результате валидности цели признак валидной цели устанавливается в ложное значение. */	
     if (state->Target_Validity_Result == ARLO_INVALID) {	
         state->Target_Valid = false;	
